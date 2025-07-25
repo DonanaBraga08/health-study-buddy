@@ -9,21 +9,28 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-soft",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground shadow-soft",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-soft",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Widgetable-inspired variants
+        widget: "bg-gradient-primary text-white border-0 shadow-widget hover:shadow-floating transition-all duration-300 hover:scale-105",
+        soft: "bg-gradient-soft text-foreground border-0 shadow-soft hover:shadow-widget transition-all duration-300",
+        study: "bg-gradient-study text-white border-0 shadow-widget hover:shadow-floating transition-all duration-300",
+        success: "bg-success text-success-foreground hover:bg-success/90 shadow-soft",
+        warning: "bg-warning text-warning-foreground hover:bg-warning/90 shadow-soft"
       },
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
         icon: "h-10 w-10",
+        widget: "h-12 px-6 py-3 text-base rounded-lg"
       },
     },
     defaultVariants: {
