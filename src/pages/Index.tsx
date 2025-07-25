@@ -4,6 +4,10 @@ import { QuickStudyWidgets } from "@/components/StudyWidget";
 import { StudyBuddy } from "@/components/StudyBuddy";
 import { StudyProgress } from "@/components/StudyProgress";
 import { PomodoroTimer } from "@/components/PomodoroTimer";
+import { FeynmanMethod } from "@/components/FeynmanMethod";
+import { FlashcardsMethod } from "@/components/FlashcardsMethod";
+import { ActiveRecallMethod } from "@/components/ActiveRecallMethod";
+import { MindMapMethod } from "@/components/MindMapMethod";
 import { QuickActions } from "@/components/QuickActions";
 import { FloatingStudyBuddy } from "@/components/FloatingStudyBuddy";
 import { Heart, BookOpen, Settings, User } from "lucide-react";
@@ -57,10 +61,17 @@ const Index = () => {
         {/* Progress Section */}
         <StudyProgress />
 
-        {/* Interactive Tools */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-          <PomodoroTimer />
-          <QuickActions />
+        {/* Study Methods */}
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold mb-4 text-foreground">Métodos de Estudo</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+            <PomodoroTimer />
+            <FeynmanMethod />
+            <FlashcardsMethod />
+            <ActiveRecallMethod />
+            <MindMapMethod />
+            <QuickActions />
+          </div>
         </div>
 
         {/* Today's Goals */}
